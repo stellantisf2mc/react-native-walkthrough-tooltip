@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,10 +18,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   shadow: {
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 2,
+    shadowColor: Platform.OS === 'ios' ? '#000000' + '30' : '#000000',
+    elevation: 25,
+    shadowRadius: 4,
     shadowOpacity: 0.8,
+    shadowOffset: { width: 0, height: 2 },
   },
   content: {
     borderRadius: 4,
