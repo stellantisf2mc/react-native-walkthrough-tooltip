@@ -389,8 +389,9 @@ class Tooltip extends Component {
               width,
               top: y,
               left: x,
-              alignItems: 'center',
-              justifyContent: 'center',
+              //commented to fix walkthrough alignment issue
+              // alignItems: 'center',
+              // justifyContent: 'center',
             },
             this.props.childrenWrapperStyle,
           ]}
